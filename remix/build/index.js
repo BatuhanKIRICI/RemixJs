@@ -126,67 +126,72 @@ import {
   Scripts,
   ScrollRestoration
 } from "@remix-run/react";
+
+// app/styles/main.css
+var main_default = "/build/_assets/main-THLKTWJO.css";
+
+// app/root.tsx
 import { jsxDEV as jsxDEV2 } from "react/jsx-dev-runtime";
-var links = () => [
-  ...void 0 ? [{ rel: "stylesheet", href: void 0 }] : []
-];
+function links() {
+  return [{ rel: "stylesheet", href: main_default }];
+}
 function App() {
   return /* @__PURE__ */ jsxDEV2("html", { lang: "en", children: [
     /* @__PURE__ */ jsxDEV2("head", { children: [
       /* @__PURE__ */ jsxDEV2("meta", { charSet: "utf-8" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 20,
+        lineNumber: 24,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 21,
+        lineNumber: 25,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(Meta, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 22,
+        lineNumber: 26,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(Links, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 23,
+        lineNumber: 27,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 19,
+      lineNumber: 23,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV2("body", { children: [
       /* @__PURE__ */ jsxDEV2(Outlet, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 26,
+        lineNumber: 30,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(ScrollRestoration, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 27,
+        lineNumber: 31,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(Scripts, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 28,
+        lineNumber: 32,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(LiveReload, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 29,
+        lineNumber: 33,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 25,
+      lineNumber: 29,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/root.tsx",
-    lineNumber: 18,
+    lineNumber: 22,
     columnNumber: 5
   }, this);
 }
@@ -194,45 +199,67 @@ function App() {
 // app/routes/_index.tsx
 var index_exports = {};
 __export(index_exports, {
-  default: () => Index
+  default: () => Index,
+  links: () => links2
 });
 import { Link } from "@remix-run/react";
-import { Fragment, jsxDEV as jsxDEV3 } from "react/jsx-dev-runtime";
+
+// app/styles/home.css
+var home_default = "/build/_assets/home-PJIINAIX.css";
+
+// app/routes/_index.tsx
+import { jsxDEV as jsxDEV3 } from "react/jsx-dev-runtime";
 function Index() {
-  return /* @__PURE__ */ jsxDEV3(Fragment, { children: [
-    /* @__PURE__ */ jsxDEV3("h1", { children: "Hello World!" }, void 0, !1, {
+  return /* @__PURE__ */ jsxDEV3("main", { id: "content", children: [
+    /* @__PURE__ */ jsxDEV3("h1", { children: "A better way of keeping track of your notes" }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 15,
+      lineNumber: 17,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV3(Link, { to: "/demo", children: "Go to demo page" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV3("p", { children: "Try our early beta and never loose track of your notes again!" }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 16,
+      lineNumber: 18,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV3("p", { id: "cta", children: /* @__PURE__ */ jsxDEV3(Link, { to: "/notes", children: "Try Now!" }, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 20,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 19,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/_index.tsx",
-    lineNumber: 14,
+    lineNumber: 16,
+    columnNumber: 5
+  }, this);
+}
+function links2() {
+  return [{ rel: "stylesheet", href: home_default }];
+}
+
+// app/routes/notes.tsx
+var notes_exports = {};
+__export(notes_exports, {
+  default: () => NotesPage
+});
+import { jsxDEV as jsxDEV4 } from "react/jsx-dev-runtime";
+function NotesPage() {
+  return /* @__PURE__ */ jsxDEV4("main", { children: /* @__PURE__ */ jsxDEV4("h1", { children: "My Notes" }, void 0, !1, {
+    fileName: "app/routes/notes.tsx",
+    lineNumber: 4,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/notes.tsx",
+    lineNumber: 3,
     columnNumber: 5
   }, this);
 }
 
-// app/routes/demo.tsx
-var demo_exports = {};
-__export(demo_exports, {
-  default: () => DemoPage
-});
-import { jsxDEV as jsxDEV4 } from "react/jsx-dev-runtime";
-function DemoPage() {
-  return /* @__PURE__ */ jsxDEV4("h2", { children: "Demo page" }, void 0, !1, {
-    fileName: "app/routes/demo.tsx",
-    lineNumber: 2,
-    columnNumber: 10
-  }, this);
-}
-
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-ALKEYBJG.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-D4APEGQC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/demo": { id: "routes/demo", parentId: "root", path: "demo", index: void 0, caseSensitive: void 0, module: "/build/routes/demo-FMEGYCQ2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "f245fb0f", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706643189668 }, url: "/build/manifest-F245FB0F.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-2HTYMPMX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XK33TCFQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-KRDSDC4U.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "b2ed5572", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706647830726 }, url: "/build/manifest-B2ED5572.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -252,13 +279,13 @@ var mode = "development", assetsBuildDirectory = "public/build", future = { v3_f
     caseSensitive: void 0,
     module: index_exports
   },
-  "routes/demo": {
-    id: "routes/demo",
+  "routes/notes": {
+    id: "routes/notes",
     parentId: "root",
-    path: "demo",
+    path: "notes",
     index: void 0,
     caseSensitive: void 0,
-    module: demo_exports
+    module: notes_exports
   }
 };
 export {
