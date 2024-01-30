@@ -194,16 +194,11 @@ function App() {
 // app/routes/_index.tsx
 var index_exports = {};
 __export(index_exports, {
-  default: () => Index,
-  meta: () => meta
+  default: () => Index
 });
 import { jsxDEV as jsxDEV3 } from "react/jsx-dev-runtime";
-var meta = () => [
-  { title: "New Remix App" },
-  { name: "description", content: "Welcome to Remix!" }
-];
 function Index() {
-  return /* @__PURE__ */ jsxDEV3("div", { children: "Hello" }, void 0, !1, {
+  return /* @__PURE__ */ jsxDEV3("h1", { children: "Hello World!" }, void 0, !1, {
     fileName: "app/routes/_index.tsx",
     lineNumber: 11,
     columnNumber: 10
@@ -211,7 +206,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-TA4IUXGU.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-BIY3A7O2.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-IYVNPBCK.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-OC3ETLUJ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "dcc8303d", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706535708558 }, url: "/build/manifest-DCC8303D.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-TA4IUXGU.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-BIY3A7O2.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-IYVNPBCK.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-NYJZE3U4.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "6edec059", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706641630464 }, url: "/build/manifest-6EDEC059.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

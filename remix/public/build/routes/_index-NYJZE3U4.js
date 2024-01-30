@@ -29,20 +29,12 @@ if (import.meta) {
     //@ts-expect-error
     "app/routes/_index.tsx"
   );
-  import.meta.hot.lastModified = "1706510028355.4314";
+  import.meta.hot.lastModified = "1706641630188.9915";
 }
-var meta = () => {
-  return [{
-    title: "New Remix App"
-  }, {
-    name: "description",
-    content: "Welcome to Remix!"
-  }];
-};
 function Index() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { children: "Hello" }, void 0, false, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", { children: "Hello World!" }, void 0, false, {
     fileName: "app/routes/_index.tsx",
-    lineNumber: 30,
+    lineNumber: 31,
     columnNumber: 10
   }, this);
 }
@@ -52,7 +44,6 @@ $RefreshReg$(_c, "Index");
 window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 export {
-  Index as default,
-  meta
+  Index as default
 };
-//# sourceMappingURL=/build/routes/_index-OC3ETLUJ.js.map
+//# sourceMappingURL=/build/routes/_index-NYJZE3U4.js.map
