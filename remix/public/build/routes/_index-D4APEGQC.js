@@ -1,4 +1,8 @@
 import {
+  Link
+} from "/build/_shared/chunk-T4HCFHGD.js";
+import "/build/_shared/chunk-GIAAE3CH.js";
+import {
   require_jsx_dev_runtime
 } from "/build/_shared/chunk-XU7DNSPJ.js";
 import {
@@ -29,12 +33,23 @@ if (import.meta) {
     //@ts-expect-error
     "app/routes/_index.tsx"
   );
-  import.meta.hot.lastModified = "1706641630188.9915";
+  import.meta.hot.lastModified = "1706643189403.0242";
 }
 function Index() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", { children: "Hello World!" }, void 0, false, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_jsx_dev_runtime.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", { children: "Hello World!" }, void 0, false, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 33,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { to: "/demo", children: "Go to demo page" }, void 0, false, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 34,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
     fileName: "app/routes/_index.tsx",
-    lineNumber: 31,
+    lineNumber: 32,
     columnNumber: 10
   }, this);
 }
@@ -46,4 +61,4 @@ window.$RefreshSig$ = prevRefreshSig;
 export {
   Index as default
 };
-//# sourceMappingURL=/build/routes/_index-NYJZE3U4.js.map
+//# sourceMappingURL=/build/routes/_index-D4APEGQC.js.map
