@@ -1,7 +1,16 @@
-export default function NotesPage() {
+import NewNote, { links as newNoteLinks } from "~/components/NewNote";
+import newNoteStyles from "~/components/NewNote.css";
+
+export default function NotesPage(): JSX.Element {
   return (
     <main>
-      <h1>My Notes</h1>
+      <h1>
+        <NewNote />
+      </h1>
     </main>
   );
+}
+
+export function links() {
+  return [...newNoteLinks()];
 }
