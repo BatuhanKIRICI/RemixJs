@@ -11,6 +11,8 @@ export default function NotesPage(): JSX.Element {
   );
 }
 
+export function action() {}
+
 export function links() {
   return [...newNoteLinks()];
 }
