@@ -34,7 +34,7 @@ if (import.meta) {
   );
 }
 function NewNote() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("form", { method: "post", id: "note-form", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("form", { method: "post", action: "/notes", id: "note-form", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "title", children: "Title" }, void 0, false, {
         fileName: "app/components/NewNote.tsx",
@@ -142,4 +142,4 @@ export {
   NotesPage as default,
   links2 as links
 };
-//# sourceMappingURL=/build/routes/notes-MY7IGKK5.js.map
+//# sourceMappingURL=/build/routes/notes-PAH52DK3.js.map
