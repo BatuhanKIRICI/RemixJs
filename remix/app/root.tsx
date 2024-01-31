@@ -10,6 +10,7 @@ import {
 } from "@remix-run/react";
 
 import styles from "./styles/main.css";
+import MainNavigation from "./components/MyNavigation";
 
 export function links(): {
   rel: string;
@@ -27,6 +28,9 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <header>
+          <MainNavigation />
+        </header>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

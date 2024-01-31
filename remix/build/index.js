@@ -130,68 +130,112 @@ import {
 // app/styles/main.css
 var main_default = "/build/_assets/main-THLKTWJO.css";
 
-// app/root.tsx
+// app/components/MyNavigation.tsx
+import { NavLink } from "@remix-run/react";
 import { jsxDEV as jsxDEV2 } from "react/jsx-dev-runtime";
+function MainNavigation() {
+  return /* @__PURE__ */ jsxDEV2("nav", { id: "main-navigation", children: /* @__PURE__ */ jsxDEV2("ul", { children: [
+    /* @__PURE__ */ jsxDEV2("li", { className: "nav-item", children: /* @__PURE__ */ jsxDEV2(NavLink, { to: "/", children: "Home" }, void 0, !1, {
+      fileName: "app/components/MyNavigation.tsx",
+      lineNumber: 8,
+      columnNumber: 11
+    }, this) }, void 0, !1, {
+      fileName: "app/components/MyNavigation.tsx",
+      lineNumber: 7,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ jsxDEV2("li", { className: "nav-item", children: /* @__PURE__ */ jsxDEV2(NavLink, { to: "/notes", children: "My Notes" }, void 0, !1, {
+      fileName: "app/components/MyNavigation.tsx",
+      lineNumber: 11,
+      columnNumber: 11
+    }, this) }, void 0, !1, {
+      fileName: "app/components/MyNavigation.tsx",
+      lineNumber: 10,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/components/MyNavigation.tsx",
+    lineNumber: 6,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/components/MyNavigation.tsx",
+    lineNumber: 5,
+    columnNumber: 5
+  }, this);
+}
+var MyNavigation_default = MainNavigation;
+
+// app/root.tsx
+import { jsxDEV as jsxDEV3 } from "react/jsx-dev-runtime";
 function links() {
   return [{ rel: "stylesheet", href: main_default }];
 }
 function App() {
-  return /* @__PURE__ */ jsxDEV2("html", { lang: "en", children: [
-    /* @__PURE__ */ jsxDEV2("head", { children: [
-      /* @__PURE__ */ jsxDEV2("meta", { charSet: "utf-8" }, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 24,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV2("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }, void 0, !1, {
+  return /* @__PURE__ */ jsxDEV3("html", { lang: "en", children: [
+    /* @__PURE__ */ jsxDEV3("head", { children: [
+      /* @__PURE__ */ jsxDEV3("meta", { charSet: "utf-8" }, void 0, !1, {
         fileName: "app/root.tsx",
         lineNumber: 25,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV2(Meta, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV3("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }, void 0, !1, {
         fileName: "app/root.tsx",
         lineNumber: 26,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV2(Links, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV3(Meta, {}, void 0, !1, {
         fileName: "app/root.tsx",
         lineNumber: 27,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3(Links, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 28,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV2("body", { children: [
-      /* @__PURE__ */ jsxDEV2(Outlet, {}, void 0, !1, {
+    /* @__PURE__ */ jsxDEV3("body", { children: [
+      /* @__PURE__ */ jsxDEV3("header", { children: /* @__PURE__ */ jsxDEV3(MyNavigation_default, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 30,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV2(ScrollRestoration, {}, void 0, !1, {
+        lineNumber: 32,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
         fileName: "app/root.tsx",
         lineNumber: 31,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV2(Scripts, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV3(Outlet, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 32,
+        lineNumber: 34,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV2(LiveReload, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV3(ScrollRestoration, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 33,
+        lineNumber: 35,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3(Scripts, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 36,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3(LiveReload, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 37,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 29,
+      lineNumber: 30,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/root.tsx",
-    lineNumber: 22,
+    lineNumber: 23,
     columnNumber: 5
   }, this);
 }
@@ -208,20 +252,20 @@ import { Link } from "@remix-run/react";
 var home_default = "/build/_assets/home-PJIINAIX.css";
 
 // app/routes/_index.tsx
-import { jsxDEV as jsxDEV3 } from "react/jsx-dev-runtime";
+import { jsxDEV as jsxDEV4 } from "react/jsx-dev-runtime";
 function Index() {
-  return /* @__PURE__ */ jsxDEV3("main", { id: "content", children: [
-    /* @__PURE__ */ jsxDEV3("h1", { children: "A better way of keeping track of your notes" }, void 0, !1, {
+  return /* @__PURE__ */ jsxDEV4("main", { id: "content", children: [
+    /* @__PURE__ */ jsxDEV4("h1", { children: "A better way of keeping track of your notes" }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
       lineNumber: 17,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV3("p", { children: "Try our early beta and never loose track of your notes again!" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV4("p", { children: "Try our early beta and never loose track of your notes again!" }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
       lineNumber: 18,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV3("p", { id: "cta", children: /* @__PURE__ */ jsxDEV3(Link, { to: "/notes", children: "Try Now!" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV4("p", { id: "cta", children: /* @__PURE__ */ jsxDEV4(Link, { to: "/notes", children: "Try Now!" }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
       lineNumber: 20,
       columnNumber: 9
@@ -251,16 +295,16 @@ __export(notes_exports, {
 var NewNote_default = "/build/_assets/NewNote-HBKIPWFQ.css";
 
 // app/components/NewNote.tsx
-import { jsxDEV as jsxDEV4 } from "react/jsx-dev-runtime";
+import { jsxDEV as jsxDEV5 } from "react/jsx-dev-runtime";
 function NewNote() {
-  return /* @__PURE__ */ jsxDEV4("form", { method: "post", id: "note-form", children: [
-    /* @__PURE__ */ jsxDEV4("p", { children: [
-      /* @__PURE__ */ jsxDEV4("label", { htmlFor: "title", children: "Title" }, void 0, !1, {
+  return /* @__PURE__ */ jsxDEV5("form", { method: "post", id: "note-form", children: [
+    /* @__PURE__ */ jsxDEV5("p", { children: [
+      /* @__PURE__ */ jsxDEV5("label", { htmlFor: "title", children: "Title" }, void 0, !1, {
         fileName: "app/components/NewNote.tsx",
         lineNumber: 7,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV4("input", { type: "text", id: "title", name: "title", required: !0 }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV5("input", { type: "text", id: "title", name: "title", required: !0 }, void 0, !1, {
         fileName: "app/components/NewNote.tsx",
         lineNumber: 8,
         columnNumber: 9
@@ -270,13 +314,13 @@ function NewNote() {
       lineNumber: 6,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV4("p", { children: [
-      /* @__PURE__ */ jsxDEV4("label", { htmlFor: "content", children: "Content" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV5("p", { children: [
+      /* @__PURE__ */ jsxDEV5("label", { htmlFor: "content", children: "Content" }, void 0, !1, {
         fileName: "app/components/NewNote.tsx",
         lineNumber: 11,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV4("textarea", { id: "content", name: "content", rows: 5, required: !0 }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV5("textarea", { id: "content", name: "content", rows: 5, required: !0 }, void 0, !1, {
         fileName: "app/components/NewNote.tsx",
         lineNumber: 12,
         columnNumber: 9
@@ -286,7 +330,7 @@ function NewNote() {
       lineNumber: 10,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV4("div", { className: "form-actions", children: /* @__PURE__ */ jsxDEV4("button", { children: "Add Note" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV5("div", { className: "form-actions", children: /* @__PURE__ */ jsxDEV5("button", { children: "Add Note" }, void 0, !1, {
       fileName: "app/components/NewNote.tsx",
       lineNumber: 15,
       columnNumber: 9
@@ -307,9 +351,9 @@ function links3() {
 }
 
 // app/routes/notes.tsx
-import { jsxDEV as jsxDEV5 } from "react/jsx-dev-runtime";
+import { jsxDEV as jsxDEV6 } from "react/jsx-dev-runtime";
 function NotesPage() {
-  return /* @__PURE__ */ jsxDEV5("main", { children: /* @__PURE__ */ jsxDEV5("h1", { children: /* @__PURE__ */ jsxDEV5(NewNote_default2, {}, void 0, !1, {
+  return /* @__PURE__ */ jsxDEV6("main", { children: /* @__PURE__ */ jsxDEV6("h1", { children: /* @__PURE__ */ jsxDEV6(NewNote_default2, {}, void 0, !1, {
     fileName: "app/routes/notes.tsx",
     lineNumber: 8,
     columnNumber: 9
@@ -328,7 +372,7 @@ function links4() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-2HTYMPMX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XK33TCFQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-MY7IGKK5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "0b02cf00", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706698491079 }, url: "/build/manifest-0B02CF00.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-VEIDDAQ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XK33TCFQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-MY7IGKK5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "a08d3cc8", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706698804849 }, url: "/build/manifest-A08D3CC8.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
