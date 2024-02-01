@@ -1,5 +1,15 @@
 {
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "remix.env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "app/data/notes.jsx",
+    "app/routes/_index.jsx",
+    "app/routes/notes.jsx",
+    "app/components/NoteList.jsx",
+    "app/components/NewNote.jsx",
+    "app/components/MyNavigation.jsx"
+  ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "isolatedModules": true,

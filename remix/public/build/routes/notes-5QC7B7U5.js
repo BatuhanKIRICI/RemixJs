@@ -1,5 +1,6 @@
 import {
   Form,
+  useActionData,
   useLoaderData,
   useNavigation
 } from "/build/_shared/chunk-T4HCFHGD.js";
@@ -24,13 +25,13 @@ var require_node = __commonJS({
   }
 });
 
-// app/routes/notes.tsx
+// app/routes/notes.jsx
 var import_node = __toESM(require_node(), 1);
 
 // app/components/NewNote.css
 var NewNote_default = "/build/_assets/NewNote-HBKIPWFQ.css";
 
-// app/components/NewNote.tsx
+// app/components/NewNote.jsx
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime(), 1);
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
@@ -38,7 +39,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   prevRefreshReg = window.$RefreshReg$;
   prevRefreshSig = window.$RefreshSig$;
   window.$RefreshReg$ = (type, id) => {
-    window.$RefreshRuntime$.register(type, '"app/components/NewNote.tsx"' + id);
+    window.$RefreshRuntime$.register(type, '"app/components/NewNote.jsx"' + id);
   };
   window.$RefreshSig$ = window.$RefreshRuntime$.createSignatureFunctionForTransform;
 }
@@ -48,63 +49,69 @@ var _s = $RefreshSig$();
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
-    "app/components/NewNote.tsx"
+    "app/components/NewNote.jsx"
   );
 }
 function NewNote() {
   _s();
+  const data = useActionData();
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Form, { method: "post", action: "/notes", id: "note-form", children: [
+    data?.message && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: data.message }, void 0, false, {
+      fileName: "app/components/NewNote.jsx",
+      lineNumber: 29,
+      columnNumber: 25
+    }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "title", children: "Title" }, void 0, false, {
-        fileName: "app/components/NewNote.tsx",
-        lineNumber: 29,
+        fileName: "app/components/NewNote.jsx",
+        lineNumber: 31,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "text", id: "title", name: "title", required: true }, void 0, false, {
-        fileName: "app/components/NewNote.tsx",
-        lineNumber: 30,
+        fileName: "app/components/NewNote.jsx",
+        lineNumber: 32,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
-      fileName: "app/components/NewNote.tsx",
-      lineNumber: 28,
+      fileName: "app/components/NewNote.jsx",
+      lineNumber: 30,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "content", children: "Content" }, void 0, false, {
-        fileName: "app/components/NewNote.tsx",
-        lineNumber: 33,
+        fileName: "app/components/NewNote.jsx",
+        lineNumber: 35,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("textarea", { id: "content", name: "content", rows: 5, required: true }, void 0, false, {
-        fileName: "app/components/NewNote.tsx",
-        lineNumber: 34,
+        fileName: "app/components/NewNote.jsx",
+        lineNumber: 36,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
-      fileName: "app/components/NewNote.tsx",
-      lineNumber: 32,
+      fileName: "app/components/NewNote.jsx",
+      lineNumber: 34,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "form-actions", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { disabled: isSubmitting, children: isSubmitting ? "Adding..." : "Add Note" }, void 0, false, {
-      fileName: "app/components/NewNote.tsx",
-      lineNumber: 37,
+      fileName: "app/components/NewNote.jsx",
+      lineNumber: 39,
       columnNumber: 9
     }, this) }, void 0, false, {
-      fileName: "app/components/NewNote.tsx",
-      lineNumber: 36,
+      fileName: "app/components/NewNote.jsx",
+      lineNumber: 38,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
-    fileName: "app/components/NewNote.tsx",
-    lineNumber: 27,
+    fileName: "app/components/NewNote.jsx",
+    lineNumber: 28,
     columnNumber: 10
   }, this);
 }
-_s(NewNote, "I2WaJhUM5KV32aS1+j3KKeVsgyA=", false, function() {
-  return [useNavigation];
+_s(NewNote, "VraVGAL90gV7Flw0Yv7Vhlrbn+U=", false, function() {
+  return [useActionData, useNavigation];
 });
 _c = NewNote;
 var NewNote_default2 = NewNote;
@@ -122,7 +129,7 @@ window.$RefreshSig$ = prevRefreshSig;
 // app/components/NoteList.css
 var NoteList_default = "/build/_assets/NoteList-KS7CKPGL.css";
 
-// app/components/NoteList.tsx
+// app/components/NoteList.jsx
 var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1);
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
@@ -130,7 +137,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   prevRefreshReg = window.$RefreshReg$;
   prevRefreshSig = window.$RefreshSig$;
   window.$RefreshReg$ = (type, id) => {
-    window.$RefreshRuntime$.register(type, '"app/components/NoteList.tsx"' + id);
+    window.$RefreshRuntime$.register(type, '"app/components/NoteList.jsx"' + id);
   };
   window.$RefreshSig$ = window.$RefreshRuntime$.createSignatureFunctionForTransform;
 }
@@ -139,7 +146,7 @@ var prevRefreshSig;
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
-    "app/components/NoteList.tsx"
+    "app/components/NoteList.jsx"
   );
 }
 function NoteList({
@@ -152,7 +159,7 @@ function NoteList({
           "#",
           index + 1
         ] }, void 0, true, {
-          fileName: "app/components/NoteList.tsx",
+          fileName: "app/components/NoteList.jsx",
           lineNumber: 29,
           columnNumber: 17
         }, this),
@@ -163,44 +170,44 @@ function NoteList({
           hour: "2-digit",
           minute: "2-digit"
         }) }, void 0, false, {
-          fileName: "app/components/NoteList.tsx",
+          fileName: "app/components/NoteList.jsx",
           lineNumber: 31,
           columnNumber: 19
         }, this) }, void 0, false, {
-          fileName: "app/components/NoteList.tsx",
+          fileName: "app/components/NoteList.jsx",
           lineNumber: 30,
           columnNumber: 17
         }, this)
       ] }, void 0, true, {
-        fileName: "app/components/NoteList.tsx",
+        fileName: "app/components/NoteList.jsx",
         lineNumber: 28,
         columnNumber: 15
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("h2", { children: note.title }, void 0, false, {
-        fileName: "app/components/NoteList.tsx",
+        fileName: "app/components/NoteList.jsx",
         lineNumber: 42,
         columnNumber: 15
       }, this)
     ] }, void 0, true, {
-      fileName: "app/components/NoteList.tsx",
+      fileName: "app/components/NoteList.jsx",
       lineNumber: 27,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("p", { children: note.content }, void 0, false, {
-      fileName: "app/components/NoteList.tsx",
+      fileName: "app/components/NoteList.jsx",
       lineNumber: 44,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
-    fileName: "app/components/NoteList.tsx",
+    fileName: "app/components/NoteList.jsx",
     lineNumber: 26,
     columnNumber: 11
   }, this) }, note.id, false, {
-    fileName: "app/components/NoteList.tsx",
+    fileName: "app/components/NoteList.jsx",
     lineNumber: 25,
     columnNumber: 35
   }, this)) }, void 0, false, {
-    fileName: "app/components/NoteList.tsx",
+    fileName: "app/components/NoteList.jsx",
     lineNumber: 24,
     columnNumber: 10
   }, this);
@@ -218,7 +225,7 @@ $RefreshReg$(_c2, "NoteList");
 window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 
-// app/routes/notes.tsx
+// app/routes/notes.jsx
 var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1);
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
@@ -226,7 +233,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   prevRefreshReg = window.$RefreshReg$;
   prevRefreshSig = window.$RefreshSig$;
   window.$RefreshReg$ = (type, id) => {
-    window.$RefreshRuntime$.register(type, '"app/routes/notes.tsx"' + id);
+    window.$RefreshRuntime$.register(type, '"app/routes/notes.jsx"' + id);
   };
   window.$RefreshSig$ = window.$RefreshRuntime$.createSignatureFunctionForTransform;
 }
@@ -236,7 +243,7 @@ var _s2 = $RefreshSig$();
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
-    "app/routes/notes.tsx"
+    "app/routes/notes.jsx"
   );
 }
 function NotesPage() {
@@ -244,22 +251,22 @@ function NotesPage() {
   const notes = useLoaderData();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("main", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(NewNote_default2, {}, void 0, false, {
-      fileName: "app/routes/notes.tsx",
-      lineNumber: 31,
+      fileName: "app/routes/notes.jsx",
+      lineNumber: 34,
       columnNumber: 9
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(NoteList_default2, { notes }, void 0, false, {
-      fileName: "app/routes/notes.tsx",
-      lineNumber: 32,
+      fileName: "app/routes/notes.jsx",
+      lineNumber: 35,
       columnNumber: 9
     }, this)
   ] }, void 0, true, {
-    fileName: "app/routes/notes.tsx",
-    lineNumber: 30,
+    fileName: "app/routes/notes.jsx",
+    lineNumber: 33,
     columnNumber: 7
   }, this) }, void 0, false, {
-    fileName: "app/routes/notes.tsx",
-    lineNumber: 29,
+    fileName: "app/routes/notes.jsx",
+    lineNumber: 32,
     columnNumber: 10
   }, this);
 }
@@ -278,4 +285,4 @@ export {
   NotesPage as default,
   links3 as links
 };
-//# sourceMappingURL=/build/routes/notes-WRIU7UEO.js.map
+//# sourceMappingURL=/build/routes/notes-5QC7B7U5.js.map

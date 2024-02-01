@@ -1,9 +1,9 @@
 import styles from "./NoteList.css";
 
-function NoteList({ notes }: any) {
+function NoteList({ notes }) {
   return (
     <ul id="note-list">
-      {notes.map((note: any, index: any) => (
+      {notes.map((note, index) => (
         <li key={note.id} className="note">
           <article>
             <header>

@@ -23,9 +23,6 @@ export default function Index() {
   );
 }
 
-export function links(): {
-  rel: string;
-  href: string;
-}[] {
+export function links() {
   return [{ rel: "stylesheet", href: homeStyles }];
 }
