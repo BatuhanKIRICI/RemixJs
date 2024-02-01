@@ -7,8 +7,19 @@ import {
 import "/build/_shared/chunk-UWV35TSL.js";
 import "/build/_shared/chunk-BOXFZXVX.js";
 import {
+  __commonJS,
   __toESM
 } from "/build/_shared/chunk-PNG5AS42.js";
+
+// empty-module:@remix-run/node
+var require_node = __commonJS({
+  "empty-module:@remix-run/node"(exports, module) {
+    module.exports = {};
+  }
+});
+
+// app/routes/notes.tsx
+var import_node = __toESM(require_node(), 1);
 
 // app/components/NewNote.css
 var NewNote_default = "/build/_assets/NewNote-HBKIPWFQ.css";
@@ -118,15 +129,15 @@ if (import.meta) {
 function NotesPage() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("main", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("h1", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(NewNote_default2, {}, void 0, false, {
     fileName: "app/routes/notes.tsx",
-    lineNumber: 24,
+    lineNumber: 26,
     columnNumber: 9
   }, this) }, void 0, false, {
     fileName: "app/routes/notes.tsx",
-    lineNumber: 23,
+    lineNumber: 25,
     columnNumber: 7
   }, this) }, void 0, false, {
     fileName: "app/routes/notes.tsx",
-    lineNumber: 22,
+    lineNumber: 24,
     columnNumber: 10
   }, this);
 }
@@ -142,4 +153,4 @@ export {
   NotesPage as default,
   links2 as links
 };
-//# sourceMappingURL=/build/routes/notes-2OOMWMX3.js.map
+//# sourceMappingURL=/build/routes/notes-HFQXZPTZ.js.map

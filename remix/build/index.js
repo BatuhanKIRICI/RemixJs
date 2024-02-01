@@ -291,6 +291,7 @@ __export(notes_exports, {
   default: () => NotesPage,
   links: () => links4
 });
+import { redirect } from "@remix-run/node";
 
 // app/components/NewNote.css
 var NewNote_default = "/build/_assets/NewNote-HBKIPWFQ.css";
@@ -351,31 +352,45 @@ function links3() {
   return [{ rel: "stylesheet", href: NewNote_default }];
 }
 
+// app/data/notes.tsx
+import fs from "fs/promises";
+async function getStoredNotes() {
+  let rawFileContent = await fs.readFile("notes.json", { encoding: "utf-8" });
+  return JSON.parse(rawFileContent).notes ?? [];
+}
+function storeNotes(notes) {
+  return fs.writeFile("notes.json", JSON.stringify({ notes: notes || [] }));
+}
+
 // app/routes/notes.tsx
 import { jsxDEV as jsxDEV6 } from "react/jsx-dev-runtime";
 function NotesPage() {
   return /* @__PURE__ */ jsxDEV6("main", { children: /* @__PURE__ */ jsxDEV6("h1", { children: /* @__PURE__ */ jsxDEV6(NewNote_default2, {}, void 0, !1, {
     fileName: "app/routes/notes.tsx",
-    lineNumber: 8,
+    lineNumber: 10,
     columnNumber: 9
   }, this) }, void 0, !1, {
     fileName: "app/routes/notes.tsx",
-    lineNumber: 7,
+    lineNumber: 9,
     columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/routes/notes.tsx",
-    lineNumber: 6,
+    lineNumber: 8,
     columnNumber: 5
   }, this);
 }
-function action() {
+async function action({ request }) {
+  let formData = await request.formData(), noteData = Object.fromEntries(formData), existingNotes = await getStoredNotes();
+  noteData.id = (/* @__PURE__ */ new Date()).toISOString();
+  let updatedNotes = existingNotes.concat(noteData);
+  return await storeNotes(updatedNotes), redirect("/notes");
 }
 function links4() {
   return [...links3()];
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-VEIDDAQ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XK33TCFQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-2OOMWMX3.js", imports: void 0, hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "62cf9538", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706700222544 }, url: "/build/manifest-62CF9538.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-VEIDDAQ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XK33TCFQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-HFQXZPTZ.js", imports: void 0, hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "acc2dff9", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706754633957 }, url: "/build/manifest-ACC2DFF9.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
