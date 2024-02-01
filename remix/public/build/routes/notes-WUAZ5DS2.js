@@ -1,5 +1,6 @@
 import {
   Form,
+  Link,
   useActionData,
   useLoaderData,
   useNavigation
@@ -277,12 +278,49 @@ _c3 = NotesPage;
 function links3() {
   return [...links(), ...links2()];
 }
+function ErrorBoundary({
+  error
+}) {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("main", { className: "error", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { children: "An error related to your notes!" }, void 0, false, {
+      fileName: "app/routes/notes.jsx",
+      lineNumber: 74,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { children: error.message }, void 0, false, {
+      fileName: "app/routes/notes.jsx",
+      lineNumber: 75,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { children: [
+      "Back to ",
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(Link, { to: "/", children: "safety" }, void 0, false, {
+        fileName: "app/routes/notes.jsx",
+        lineNumber: 77,
+        columnNumber: 17
+      }, this),
+      "!"
+    ] }, void 0, true, {
+      fileName: "app/routes/notes.jsx",
+      lineNumber: 76,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "app/routes/notes.jsx",
+    lineNumber: 73,
+    columnNumber: 10
+  }, this);
+}
+_c22 = ErrorBoundary;
 var _c3;
+var _c22;
 $RefreshReg$(_c3, "NotesPage");
+$RefreshReg$(_c22, "ErrorBoundary");
 window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 export {
+  ErrorBoundary,
   NotesPage as default,
   links3 as links
 };
-//# sourceMappingURL=/build/routes/notes-5QC7B7U5.js.map
+//# sourceMappingURL=/build/routes/notes-WUAZ5DS2.js.map

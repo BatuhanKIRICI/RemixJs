@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -177,12 +178,116 @@ function App() {
   }, this);
 }
 _c2 = App;
+function ErrorBoundary({
+  error
+}) {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("html", { lang: "en", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("head", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("meta", { charSet: "utf-8" }, void 0, false, {
+        fileName: "app/root.tsx",
+        lineNumber: 54,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }, void 0, false, {
+        fileName: "app/root.tsx",
+        lineNumber: 55,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(Meta, {}, void 0, false, {
+        fileName: "app/root.tsx",
+        lineNumber: 56,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(Links, {}, void 0, false, {
+        fileName: "app/root.tsx",
+        lineNumber: 57,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("title", { children: "An error occured!" }, void 0, false, {
+        fileName: "app/root.tsx",
+        lineNumber: 58,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "app/root.tsx",
+      lineNumber: 53,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("body", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("header", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(MyNavigation_default, {}, void 0, false, {
+        fileName: "app/root.tsx",
+        lineNumber: 62,
+        columnNumber: 11
+      }, this) }, void 0, false, {
+        fileName: "app/root.tsx",
+        lineNumber: 61,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("main", { className: "error", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("h1", { children: "An error occured!" }, void 0, false, {
+          fileName: "app/root.tsx",
+          lineNumber: 65,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("p", { children: error.message }, void 0, false, {
+          fileName: "app/root.tsx",
+          lineNumber: 66,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("p", { children: [
+          "Back to ",
+          /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(Link, { to: "/", children: "safety" }, void 0, false, {
+            fileName: "app/root.tsx",
+            lineNumber: 68,
+            columnNumber: 21
+          }, this),
+          "!"
+        ] }, void 0, true, {
+          fileName: "app/root.tsx",
+          lineNumber: 67,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "app/root.tsx",
+        lineNumber: 64,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(ScrollRestoration, {}, void 0, false, {
+        fileName: "app/root.tsx",
+        lineNumber: 71,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(Scripts, {}, void 0, false, {
+        fileName: "app/root.tsx",
+        lineNumber: 72,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(LiveReload, {}, void 0, false, {
+        fileName: "app/root.tsx",
+        lineNumber: 73,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "app/root.tsx",
+      lineNumber: 60,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "app/root.tsx",
+    lineNumber: 52,
+    columnNumber: 10
+  }, this);
+}
+_c22 = ErrorBoundary;
 var _c2;
+var _c22;
 $RefreshReg$(_c2, "App");
+$RefreshReg$(_c22, "ErrorBoundary");
 window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 export {
+  ErrorBoundary,
   App as default,
   links
 };
-//# sourceMappingURL=/build/root-YSWVBYAY.js.map
+//# sourceMappingURL=/build/root-TLVD5VFZ.js.map
