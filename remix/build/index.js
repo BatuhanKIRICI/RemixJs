@@ -59,11 +59,11 @@ function handleBotRequest(request, responseStatusCode, responseHeaders, remixCon
             })
           ), pipe(body);
         },
-        onShellError(error) {
-          reject(error);
+        onShellError(error2) {
+          reject(error2);
         },
-        onError(error) {
-          responseStatusCode = 500, shellRendered && console.error(error);
+        onError(error2) {
+          responseStatusCode = 500, shellRendered && console.error(error2);
         }
       }
     );
@@ -100,11 +100,11 @@ function handleBrowserRequest(request, responseStatusCode, responseHeaders, remi
             })
           ), pipe(body);
         },
-        onShellError(error) {
-          reject(error);
+        onShellError(error2) {
+          reject(error2);
         },
-        onError(error) {
-          responseStatusCode = 500, shellRendered && console.error(error);
+        onError(error2) {
+          responseStatusCode = 500, shellRendered && console.error(error2);
         }
       }
     );
@@ -115,6 +115,7 @@ function handleBrowserRequest(request, responseStatusCode, responseHeaders, remi
 // app/root.tsx
 var root_exports = {};
 __export(root_exports, {
+  CatchBoundary: () => CatchBoundary,
   ErrorBoundary: () => ErrorBoundary,
   default: () => App,
   links: () => links
@@ -241,101 +242,199 @@ function App() {
     columnNumber: 5
   }, this);
 }
-function ErrorBoundary({ error }) {
-  return /* @__PURE__ */ jsxDEV3("html", { lang: "en", children: [
+function CatchBoundary() {
+  return useCatch(), /* @__PURE__ */ jsxDEV3("html", { lang: "en", children: [
     /* @__PURE__ */ jsxDEV3("head", { children: [
       /* @__PURE__ */ jsxDEV3("meta", { charSet: "utf-8" }, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 48,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV3("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }, void 0, !1, {
         fileName: "app/root.tsx",
         lineNumber: 49,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV3(Meta, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV3("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }, void 0, !1, {
         fileName: "app/root.tsx",
         lineNumber: 50,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV3(Links, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV3(Meta, {}, void 0, !1, {
         fileName: "app/root.tsx",
         lineNumber: 51,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV3("title", { children: "An error occured!" }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV3(Links, {}, void 0, !1, {
         fileName: "app/root.tsx",
         lineNumber: 52,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3("title", { children: "An error occured!" }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 53,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 47,
+      lineNumber: 48,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV3("body", { children: [
       /* @__PURE__ */ jsxDEV3("header", { children: /* @__PURE__ */ jsxDEV3(MyNavigation_default, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 56,
+        lineNumber: 57,
         columnNumber: 11
       }, this) }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 55,
+        lineNumber: 56,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV3("main", { className: "error", children: [
         /* @__PURE__ */ jsxDEV3("h1", { children: "An error occured!" }, void 0, !1, {
           fileName: "app/root.tsx",
-          lineNumber: 59,
+          lineNumber: 60,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ jsxDEV3("p", { children: error.message }, void 0, !1, {
           fileName: "app/root.tsx",
-          lineNumber: 60,
+          lineNumber: 61,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ jsxDEV3("p", { children: [
           "Back to ",
           /* @__PURE__ */ jsxDEV3(Link, { to: "/", children: "safety" }, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 62,
+            lineNumber: 63,
             columnNumber: 21
           }, this),
           "!"
         ] }, void 0, !0, {
           fileName: "app/root.tsx",
-          lineNumber: 61,
+          lineNumber: 62,
           columnNumber: 11
         }, this)
       ] }, void 0, !0, {
         fileName: "app/root.tsx",
-        lineNumber: 58,
+        lineNumber: 59,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV3(ScrollRestoration, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 65,
+        lineNumber: 66,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV3(Scripts, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 66,
+        lineNumber: 67,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV3(LiveReload, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 67,
+        lineNumber: 68,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 54,
+      lineNumber: 55,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/root.tsx",
-    lineNumber: 46,
+    lineNumber: 47,
+    columnNumber: 5
+  }, this);
+}
+function ErrorBoundary({ error: error2 }) {
+  return /* @__PURE__ */ jsxDEV3("html", { lang: "en", children: [
+    /* @__PURE__ */ jsxDEV3("head", { children: [
+      /* @__PURE__ */ jsxDEV3("meta", { charSet: "utf-8" }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 78,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 79,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3(Meta, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 80,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3(Links, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 81,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3("title", { children: "An error occured!" }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 82,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/root.tsx",
+      lineNumber: 77,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV3("body", { children: [
+      /* @__PURE__ */ jsxDEV3("header", { children: /* @__PURE__ */ jsxDEV3(MyNavigation_default, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 86,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 85,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3("main", { className: "error", children: [
+        /* @__PURE__ */ jsxDEV3("h1", { children: "An error occured!" }, void 0, !1, {
+          fileName: "app/root.tsx",
+          lineNumber: 89,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV3("p", { children: error2.message }, void 0, !1, {
+          fileName: "app/root.tsx",
+          lineNumber: 90,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV3("p", { children: [
+          "Back to ",
+          /* @__PURE__ */ jsxDEV3(Link, { to: "/", children: "safety" }, void 0, !1, {
+            fileName: "app/root.tsx",
+            lineNumber: 92,
+            columnNumber: 21
+          }, this),
+          "!"
+        ] }, void 0, !0, {
+          fileName: "app/root.tsx",
+          lineNumber: 91,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/root.tsx",
+        lineNumber: 88,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3(ScrollRestoration, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 95,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3(Scripts, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 96,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV3(LiveReload, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 97,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/root.tsx",
+      lineNumber: 84,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/root.tsx",
+    lineNumber: 76,
     columnNumber: 5
   }, this);
 }
@@ -387,6 +486,7 @@ function links2() {
 // app/routes/notes.jsx
 var notes_exports = {};
 __export(notes_exports, {
+  CatchBoundary: () => CatchBoundary2,
   ErrorBoundary: () => ErrorBoundary2,
   action: () => action,
   default: () => NotesPage,
@@ -571,7 +671,13 @@ function NotesPage() {
   }, this);
 }
 async function loader() {
-  return await getStoredNotes();
+  let notes = await getStoredNotes();
+  if (!notes || notes.length === 0)
+    throw json(
+      { message: "Could not find any notes." },
+      { status: 404, statusText: "Not Found" }
+    );
+  return notes;
 }
 async function action({ request }) {
   let formData = await request.formData(), noteData = Object.fromEntries(formData);
@@ -585,40 +691,59 @@ async function action({ request }) {
 function links5() {
   return [...links3(), ...links4()];
 }
-function ErrorBoundary2({ error }) {
+function CatchBoundary2() {
+  let message = useCatch().data?.message || "Data not found.";
+  return /* @__PURE__ */ jsxDEV7("main", { children: [
+    /* @__PURE__ */ jsxDEV7(NewNote_default2, {}, void 0, !1, {
+      fileName: "app/routes/notes.jsx",
+      lineNumber: 63,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("p", { className: "info-message", children: message }, void 0, !1, {
+      fileName: "app/routes/notes.jsx",
+      lineNumber: 64,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/notes.jsx",
+    lineNumber: 62,
+    columnNumber: 5
+  }, this);
+}
+function ErrorBoundary2({ error: error2 }) {
   return /* @__PURE__ */ jsxDEV7("main", { className: "error", children: [
     /* @__PURE__ */ jsxDEV7("h1", { children: "An error related to your notes!" }, void 0, !1, {
       fileName: "app/routes/notes.jsx",
-      lineNumber: 53,
+      lineNumber: 72,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV7("p", { children: error.message }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV7("p", { children: error2.message }, void 0, !1, {
       fileName: "app/routes/notes.jsx",
-      lineNumber: 54,
+      lineNumber: 73,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV7("p", { children: [
       "Back to ",
       /* @__PURE__ */ jsxDEV7(Link3, { to: "/", children: "safety" }, void 0, !1, {
         fileName: "app/routes/notes.jsx",
-        lineNumber: 56,
+        lineNumber: 75,
         columnNumber: 17
       }, this),
       "!"
     ] }, void 0, !0, {
       fileName: "app/routes/notes.jsx",
-      lineNumber: 55,
+      lineNumber: 74,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/notes.jsx",
-    lineNumber: 52,
+    lineNumber: 71,
     columnNumber: 5
   }, this);
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-TLVD5VFZ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !0 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-PUHCO5RL.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-WUAZ5DS2.js", imports: void 0, hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !0 } }, version: "f1e74050", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706780827695 }, url: "/build/manifest-F1E74050.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-ZZQRVZW7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !0 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-PUHCO5RL.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-Y64WUQXL.js", imports: void 0, hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !0 } }, version: "a6816cea", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706798566171 }, url: "/build/manifest-A6816CEA.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

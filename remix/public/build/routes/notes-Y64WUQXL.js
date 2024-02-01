@@ -241,6 +241,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
 var prevRefreshReg;
 var prevRefreshSig;
 var _s2 = $RefreshSig$();
+var _s22 = $RefreshSig$();
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
@@ -253,21 +254,21 @@ function NotesPage() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("main", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(NewNote_default2, {}, void 0, false, {
       fileName: "app/routes/notes.jsx",
-      lineNumber: 34,
+      lineNumber: 35,
       columnNumber: 9
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(NoteList_default2, { notes }, void 0, false, {
       fileName: "app/routes/notes.jsx",
-      lineNumber: 35,
+      lineNumber: 36,
       columnNumber: 9
     }, this)
   ] }, void 0, true, {
     fileName: "app/routes/notes.jsx",
-    lineNumber: 33,
+    lineNumber: 34,
     columnNumber: 7
   }, this) }, void 0, false, {
     fileName: "app/routes/notes.jsx",
-    lineNumber: 32,
+    lineNumber: 33,
     columnNumber: 10
   }, this);
 }
@@ -278,44 +279,69 @@ _c3 = NotesPage;
 function links3() {
   return [...links(), ...links2()];
 }
+function CatchBoundary() {
+  _s22();
+  const caughtResponse = useCatch();
+  const message = caughtResponse.data?.message || "Data not found.";
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("main", { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(NewNote_default2, {}, void 0, false, {
+      fileName: "app/routes/notes.jsx",
+      lineNumber: 84,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { className: "info-message", children: message }, void 0, false, {
+      fileName: "app/routes/notes.jsx",
+      lineNumber: 85,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "app/routes/notes.jsx",
+    lineNumber: 83,
+    columnNumber: 10
+  }, this);
+}
+_s22(CatchBoundary, "aC0yisvsYUE46qxyVmeMcDtCdmM=", true);
+_c22 = CatchBoundary;
 function ErrorBoundary({
   error
 }) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("main", { className: "error", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { children: "An error related to your notes!" }, void 0, false, {
       fileName: "app/routes/notes.jsx",
-      lineNumber: 74,
+      lineNumber: 94,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { children: error.message }, void 0, false, {
       fileName: "app/routes/notes.jsx",
-      lineNumber: 75,
+      lineNumber: 95,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { children: [
       "Back to ",
       /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(Link, { to: "/", children: "safety" }, void 0, false, {
         fileName: "app/routes/notes.jsx",
-        lineNumber: 77,
+        lineNumber: 97,
         columnNumber: 17
       }, this),
       "!"
     ] }, void 0, true, {
       fileName: "app/routes/notes.jsx",
-      lineNumber: 76,
+      lineNumber: 96,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/routes/notes.jsx",
-    lineNumber: 73,
+    lineNumber: 93,
     columnNumber: 10
   }, this);
 }
-_c22 = ErrorBoundary;
+_c32 = ErrorBoundary;
 var _c3;
 var _c22;
+var _c32;
 $RefreshReg$(_c3, "NotesPage");
-$RefreshReg$(_c22, "ErrorBoundary");
+$RefreshReg$(_c22, "CatchBoundary");
+$RefreshReg$(_c32, "ErrorBoundary");
 window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 export {
@@ -323,4 +349,4 @@ export {
   NotesPage as default,
   links3 as links
 };
-//# sourceMappingURL=/build/routes/notes-WUAZ5DS2.js.map
+//# sourceMappingURL=/build/routes/notes-Y64WUQXL.js.map

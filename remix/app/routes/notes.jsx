@@ -21,6 +21,12 @@ export default function NotesPage() {
 
 export async function loader() {
   const notes = await getStoredNotes();
+  if (!notes || notes.length === 0) {
+    throw json(
+      { message: "Could not find any notes." },
+      { status: 404, statusText: "Not Found" }
+    );
+  }
   return notes;
 }
 
@@ -45,6 +51,19 @@ export async function action({ request }) {
 
 export function links() {
   return [...newNoteLinks(), ...noteListLink()];
+}
+
+export function CatchBoundary() {
+  const caughtResponse = useCatch();
+
+  const message = caughtResponse.data?.message || "Data not found.";
+
+  return (
+    <main>
+      <NewNote />
+      <p className="info-message">{message}</p>
+    </main>
+  );
 }
 
 export function ErrorBoundary({ error }) {
