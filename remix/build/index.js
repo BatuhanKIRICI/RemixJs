@@ -298,53 +298,54 @@ import { redirect } from "@remix-run/node";
 var NewNote_default = "/build/_assets/NewNote-HBKIPWFQ.css";
 
 // app/components/NewNote.tsx
+import { Form } from "@remix-run/react";
 import { jsxDEV as jsxDEV5 } from "react/jsx-dev-runtime";
 function NewNote() {
-  return /* @__PURE__ */ jsxDEV5("form", { method: "post", action: "/notes", id: "note-form", children: [
+  return /* @__PURE__ */ jsxDEV5(Form, { method: "post", action: "/notes", id: "note-form", children: [
     /* @__PURE__ */ jsxDEV5("p", { children: [
       /* @__PURE__ */ jsxDEV5("label", { htmlFor: "title", children: "Title" }, void 0, !1, {
         fileName: "app/components/NewNote.tsx",
-        lineNumber: 7,
+        lineNumber: 8,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV5("input", { type: "text", id: "title", name: "title", required: !0 }, void 0, !1, {
         fileName: "app/components/NewNote.tsx",
-        lineNumber: 8,
+        lineNumber: 9,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/NewNote.tsx",
-      lineNumber: 6,
+      lineNumber: 7,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV5("p", { children: [
       /* @__PURE__ */ jsxDEV5("label", { htmlFor: "content", children: "Content" }, void 0, !1, {
         fileName: "app/components/NewNote.tsx",
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV5("textarea", { id: "content", name: "content", rows: 5, required: !0 }, void 0, !1, {
         fileName: "app/components/NewNote.tsx",
-        lineNumber: 12,
+        lineNumber: 13,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/NewNote.tsx",
-      lineNumber: 10,
+      lineNumber: 11,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV5("div", { className: "form-actions", children: /* @__PURE__ */ jsxDEV5("button", { children: "Add Note" }, void 0, !1, {
       fileName: "app/components/NewNote.tsx",
-      lineNumber: 15,
+      lineNumber: 16,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/components/NewNote.tsx",
-      lineNumber: 14,
+      lineNumber: 15,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/NewNote.tsx",
-    lineNumber: 5,
+    lineNumber: 6,
     columnNumber: 5
   }, this);
 }
@@ -476,7 +477,7 @@ function links5() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-VEIDDAQ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XK33TCFQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-ET4FQILN.js", imports: void 0, hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "bc4302d0", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706756502811 }, url: "/build/manifest-BC4302D0.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-VEIDDAQ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XK33TCFQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-UVAWZSQJ.js", imports: void 0, hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "3fb78b1b", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706756887416 }, url: "/build/manifest-3FB78B1B.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

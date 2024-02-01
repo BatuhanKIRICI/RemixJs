@@ -1,4 +1,5 @@
 import {
+  Form,
   useLoaderData
 } from "/build/_shared/chunk-T4HCFHGD.js";
 import "/build/_shared/chunk-GIAAE3CH.js";
@@ -49,51 +50,51 @@ if (import.meta) {
   );
 }
 function NewNote() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("form", { method: "post", action: "/notes", id: "note-form", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Form, { method: "post", action: "/notes", id: "note-form", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "title", children: "Title" }, void 0, false, {
         fileName: "app/components/NewNote.tsx",
-        lineNumber: 24,
+        lineNumber: 25,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "text", id: "title", name: "title", required: true }, void 0, false, {
         fileName: "app/components/NewNote.tsx",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/components/NewNote.tsx",
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "content", children: "Content" }, void 0, false, {
         fileName: "app/components/NewNote.tsx",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("textarea", { id: "content", name: "content", rows: 5, required: true }, void 0, false, {
         fileName: "app/components/NewNote.tsx",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/components/NewNote.tsx",
-      lineNumber: 27,
+      lineNumber: 28,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "form-actions", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { children: "Add Note" }, void 0, false, {
       fileName: "app/components/NewNote.tsx",
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 9
     }, this) }, void 0, false, {
       fileName: "app/components/NewNote.tsx",
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/components/NewNote.tsx",
-    lineNumber: 22,
+    lineNumber: 23,
     columnNumber: 10
   }, this);
 }
@@ -269,4 +270,4 @@ export {
   NotesPage as default,
   links3 as links
 };
-//# sourceMappingURL=/build/routes/notes-ET4FQILN.js.map
+//# sourceMappingURL=/build/routes/notes-UVAWZSQJ.js.map

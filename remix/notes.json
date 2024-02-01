@@ -1,6 +1,1 @@
-{
-  "notes": [
-    { "title": "title", "content": "title", "id": "2024-02-01T02:31:43.407Z" },
-    { "title": "title2", "content": "title2", "id": "2024-02-01T02:32:08.796Z" }
-  ]
-}
+{"notes":[{"title":"title","content":"title","id":"2024-02-01T02:31:43.407Z"},{"title":"title2","content":"title2","id":"2024-02-01T02:32:08.796Z"},{"title":"test3","content":"test3","id":"2024-02-01T03:06:25.034Z"},{"title":"fourth","content":"fourth","id":"2024-02-01T03:08:44.257Z"}]}
