@@ -1,6 +1,7 @@
 import {
   Form,
-  useLoaderData
+  useLoaderData,
+  useNavigation
 } from "/build/_shared/chunk-T4HCFHGD.js";
 import "/build/_shared/chunk-GIAAE3CH.js";
 import {
@@ -43,6 +44,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
 }
 var prevRefreshReg;
 var prevRefreshSig;
+var _s = $RefreshSig$();
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
@@ -50,30 +52,17 @@ if (import.meta) {
   );
 }
 function NewNote() {
+  _s();
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Form, { method: "post", action: "/notes", id: "note-form", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "title", children: "Title" }, void 0, false, {
         fileName: "app/components/NewNote.tsx",
-        lineNumber: 25,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "text", id: "title", name: "title", required: true }, void 0, false, {
-        fileName: "app/components/NewNote.tsx",
-        lineNumber: 26,
-        columnNumber: 9
-      }, this)
-    ] }, void 0, true, {
-      fileName: "app/components/NewNote.tsx",
-      lineNumber: 24,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "content", children: "Content" }, void 0, false, {
-        fileName: "app/components/NewNote.tsx",
         lineNumber: 29,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("textarea", { id: "content", name: "content", rows: 5, required: true }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "text", id: "title", name: "title", required: true }, void 0, false, {
         fileName: "app/components/NewNote.tsx",
         lineNumber: 30,
         columnNumber: 9
@@ -83,21 +72,40 @@ function NewNote() {
       lineNumber: 28,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "form-actions", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { children: "Add Note" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("label", { htmlFor: "content", children: "Content" }, void 0, false, {
+        fileName: "app/components/NewNote.tsx",
+        lineNumber: 33,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("textarea", { id: "content", name: "content", rows: 5, required: true }, void 0, false, {
+        fileName: "app/components/NewNote.tsx",
+        lineNumber: 34,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
       fileName: "app/components/NewNote.tsx",
-      lineNumber: 33,
+      lineNumber: 32,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "form-actions", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { disabled: isSubmitting, children: isSubmitting ? "Adding..." : "Add Note" }, void 0, false, {
+      fileName: "app/components/NewNote.tsx",
+      lineNumber: 37,
       columnNumber: 9
     }, this) }, void 0, false, {
       fileName: "app/components/NewNote.tsx",
-      lineNumber: 32,
+      lineNumber: 36,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/components/NewNote.tsx",
-    lineNumber: 23,
+    lineNumber: 27,
     columnNumber: 10
   }, this);
 }
+_s(NewNote, "I2WaJhUM5KV32aS1+j3KKeVsgyA=", false, function() {
+  return [useNavigation];
+});
 _c = NewNote;
 var NewNote_default2 = NewNote;
 function links() {
@@ -224,7 +232,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
 }
 var prevRefreshReg;
 var prevRefreshSig;
-var _s = $RefreshSig$();
+var _s2 = $RefreshSig$();
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
@@ -232,7 +240,7 @@ if (import.meta) {
   );
 }
 function NotesPage() {
-  _s();
+  _s2();
   const notes = useLoaderData();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("main", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(NewNote_default2, {}, void 0, false, {
@@ -255,7 +263,7 @@ function NotesPage() {
     columnNumber: 10
   }, this);
 }
-_s(NotesPage, "lCYwax5cFMe1PUxNanskqlEV3FQ=", false, function() {
+_s2(NotesPage, "lCYwax5cFMe1PUxNanskqlEV3FQ=", false, function() {
   return [useLoaderData];
 });
 _c3 = NotesPage;
@@ -270,4 +278,4 @@ export {
   NotesPage as default,
   links3 as links
 };
-//# sourceMappingURL=/build/routes/notes-UVAWZSQJ.js.map
+//# sourceMappingURL=/build/routes/notes-WRIU7UEO.js.map
