@@ -3,19 +3,25 @@ import NewNote, { links as newNoteLinks } from "~/components/NewNote";
 import newNoteStyles from "~/components/NewNote.css";
 import { getStoredNotes, storeNotes } from "~/data/notes";
 import NoteList, { links as noteListLink } from "~/components/NoteList";
+import { useLoaderData } from "@remix-run/react";
 
 export default function NotesPage(): JSX.Element {
+  const notes = useLoaderData();
+
   return (
     <main>
       <h1>
         <NewNote />
-        <NoteList />
+        <NoteList notes={notes} />
       </h1>
     </main>
   );
 }
 
-export function loader() {}
+export async function loader() {
+  const notes = await getStoredNotes();
+  return notes;
+}
 
 export async function action({ request }: any) {
   const formData = await request.formData();

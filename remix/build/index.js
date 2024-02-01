@@ -437,30 +437,33 @@ function links4() {
 }
 
 // app/routes/notes.tsx
+import { useLoaderData } from "@remix-run/react";
 import { jsxDEV as jsxDEV7 } from "react/jsx-dev-runtime";
 function NotesPage() {
+  let notes = useLoaderData();
   return /* @__PURE__ */ jsxDEV7("main", { children: /* @__PURE__ */ jsxDEV7("h1", { children: [
     /* @__PURE__ */ jsxDEV7(NewNote_default2, {}, void 0, !1, {
       fileName: "app/routes/notes.tsx",
-      lineNumber: 11,
+      lineNumber: 14,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ jsxDEV7(NoteList_default2, {}, void 0, !1, {
+    /* @__PURE__ */ jsxDEV7(NoteList_default2, { notes }, void 0, !1, {
       fileName: "app/routes/notes.tsx",
-      lineNumber: 12,
+      lineNumber: 15,
       columnNumber: 9
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/notes.tsx",
-    lineNumber: 10,
+    lineNumber: 13,
     columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/routes/notes.tsx",
-    lineNumber: 9,
+    lineNumber: 12,
     columnNumber: 5
   }, this);
 }
-function loader() {
+async function loader() {
+  return await getStoredNotes();
 }
 async function action({ request }) {
   let formData = await request.formData(), noteData = Object.fromEntries(formData), existingNotes = await getStoredNotes();
@@ -473,7 +476,7 @@ function links5() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-VEIDDAQ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XK33TCFQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-64ZMQ6YZ.js", imports: void 0, hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "9d9d75cc", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706756087624 }, url: "/build/manifest-9D9D75CC.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-OE2MBWTE.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-T4HCFHGD.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-Q7KTKYBB.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-VEIDDAQ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XK33TCFQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-ET4FQILN.js", imports: void 0, hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "bc4302d0", hmr: { runtime: "/build/_shared/chunk-Q7KTKYBB.js", timestamp: 1706756502811 }, url: "/build/manifest-BC4302D0.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

@@ -1,4 +1,8 @@
 import {
+  useLoaderData
+} from "/build/_shared/chunk-T4HCFHGD.js";
+import "/build/_shared/chunk-GIAAE3CH.js";
+import {
   require_jsx_dev_runtime
 } from "/build/_shared/chunk-XU7DNSPJ.js";
 import {
@@ -219,6 +223,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
 }
 var prevRefreshReg;
 var prevRefreshSig;
+var _s = $RefreshSig$();
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
@@ -226,27 +231,32 @@ if (import.meta) {
   );
 }
 function NotesPage() {
+  _s();
+  const notes = useLoaderData();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("main", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(NewNote_default2, {}, void 0, false, {
       fileName: "app/routes/notes.tsx",
-      lineNumber: 27,
+      lineNumber: 31,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(NoteList_default2, {}, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(NoteList_default2, { notes }, void 0, false, {
       fileName: "app/routes/notes.tsx",
-      lineNumber: 28,
+      lineNumber: 32,
       columnNumber: 9
     }, this)
   ] }, void 0, true, {
     fileName: "app/routes/notes.tsx",
-    lineNumber: 26,
+    lineNumber: 30,
     columnNumber: 7
   }, this) }, void 0, false, {
     fileName: "app/routes/notes.tsx",
-    lineNumber: 25,
+    lineNumber: 29,
     columnNumber: 10
   }, this);
 }
+_s(NotesPage, "lCYwax5cFMe1PUxNanskqlEV3FQ=", false, function() {
+  return [useLoaderData];
+});
 _c3 = NotesPage;
 function links3() {
   return [...links(), ...links2()];
@@ -259,4 +269,4 @@ export {
   NotesPage as default,
   links3 as links
 };
-//# sourceMappingURL=/build/routes/notes-64ZMQ6YZ.js.map
+//# sourceMappingURL=/build/routes/notes-ET4FQILN.js.map
